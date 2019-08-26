@@ -8,20 +8,20 @@ export default function Footer() {
         <div className="container">
           <div className="row">
             {/*Colum1*/}
-            <div className="col-md-3 col-sm-6">
+            <div className="col-md-3 col-sm-6 ">
               <h5>Products</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/">Online Mix</a>
+                  <a href="/">Tracks Banks</a>
                 </li>
                 <li>
-                  <a href="/">Personal mix</a>
+                  <a href="/">Samples Banks (Free)</a>
                 </li>
                 <li>
-                  <a href="/">Electronics</a>
+                  <a href="/">Opening Stickers (Free)</a>
                 </li>
                 <li>
-                  <a href="/">Software</a>
+                  <a href="/">Courses</a>
                 </li>
               </ul>
             </div>
@@ -30,16 +30,16 @@ export default function Footer() {
               <h5>Services</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/">Online Mix</a>
+                  <a href="/">Studio Online</a>
                 </li>
                 <li>
-                  <a href="/">Personal mix</a>
+                  <a href="/">Audio for Marketing Online</a>
                 </li>
                 <li>
-                  <a href="/">Electronics</a>
+                  <a href="/">Personal Mix</a>
                 </li>
                 <li>
-                  <a href="/">Software</a>
+                  <a href="/">Formats Converter (Free)</a>
                 </li>
               </ul>
             </div>
@@ -48,27 +48,35 @@ export default function Footer() {
               <h5>Tutorials</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/">Online Mix</a>
+                  <a href="/">Mixing</a>
                 </li>
                 <li>
-                  <a href="/">Personal mix</a>
+                  <a href="/">Audio</a>
                 </li>
                 <li>
-                  <a href="/">Electronics</a>
+                  <a href="/">Electronics Basics</a>
                 </li>
                 <li>
-                  <a href="/">Software</a>
+                  <a href="/">DSP Basics</a>
+                </li>
+                <li>
+                  <a href="/">Software Basics</a>
                 </li>
               </ul>
             </div>
             {/*Colum4*/}
             <div className="col-md-3 col-sm-6">
-              <h5>Contact</h5>
+              <h5>Social Media</h5>
               <ul className="list-unstyled">
-                <li>Online Mix</li>
-                <li>Personal mix</li>
-                <li>Electronics</li>
-                <li>Software</li>
+                <li>
+                  <a href="/">Instagram</a>
+                </li>
+                <li>
+                  <a href="/">Facebook</a>
+                </li>
+                <li>
+                  <a href="/">Youtube</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -88,12 +96,12 @@ export default function Footer() {
 const FooterContainer = styled.footer`
   .footer-middle {
     background: var(--mainDark);
-    padding-top: 3rem;
+    padding-top: 2rem;
     color: var(--mainWhite);
   }
   .footer-bottom {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   ul li a {
     color: var(--mainWhite);
