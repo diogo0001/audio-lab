@@ -81,7 +81,13 @@ export default function Footer() {
             </div>
           </div>
           {/* Footer */}
-          <div className="footer-bottom">
+          <div
+            className="footer-bottom"
+            style={{
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
             <p className="text-xs-center">
               &copy;{new Date().getFullYear()} Audio Tech Lab - All Rights
               Reserved

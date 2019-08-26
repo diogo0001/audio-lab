@@ -3,7 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Products from "./components/Products";
+import Products from "./components/products/Products";
 import Services from "./components/Services";
 import Tutorials from "./components/Tutorials";
 import Contact from "./components/Contact";

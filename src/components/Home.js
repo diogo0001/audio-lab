@@ -1,34 +1,34 @@
 import React from "react";
 
+const styles = {
+  container: {
+    padding: "60px 0px 0px 0px",
+    margin: "160px 0px 0px 0px"
+  },
+  title: {
+    backgroundColor: "#101010cc",
+    display: "flex",
+    justifyContent: "center",
+    padding: "50px",
+    marginBottom: "160px",
+    color: "#fff"
+  },
+  text: {
+    // margin: "60px 0px 0px 0px ",
+    padding: "30px",
+    color: "#000",
+    backgroundColor: "#efefefef"
+  }
+};
+
 export default function Home() {
   return (
     <div>
-      <div
-        style={{
-          backgroundColor: "#222222a6",
-          padding: "60px 20px 100px 20px",
-          margin: "60px 0px 0px 0px",
-          color: "#fff"
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "10px"
-          }}
-        >
-          <h4>Everything about Audio Technology.</h4>
+      <div style={styles.container}>
+        <div style={styles.title}>
+          <h3>Everything about Audio Technology.</h3>
         </div>
-        <div
-          style={{
-            margin: "0px 80px 0px 80px ",
-            padding: "20px",
-            backgroundColor: "#232323b2",
-            borderRadius: "10px",
-            boxShadow: "0px 0px 80px 50px #232323c3"
-          }}
-        >
+        {/* <div style={styles.text}>
           <p>Our platform provides .... </p>
           <br />
           <p>Our platform provides .... </p>
@@ -37,32 +37,8 @@ export default function Home() {
           <br />
           <p>Our platform provides .... </p>
           <br />
-          <p>Our platform provides .... </p>
-          <br />
-        </div>
+        </div> */}
       </div>
     </div>
   );
 }
-
-// const styles= {
-//   bg={
-//     backgroundColor: "#0000005f",
-//     padding: "60px 0px 100px 40px",
-//     margin: "60px 0px 0px 0px",
-//     color: "#fff"
-//   },
-//   title={
-//     display: "flex",
-//             justifyContent: "center",
-//             marginBottom: "10px"
-//   },
-//   textBg={
-//     margin: "0px 0px 0px 80px ",
-//     padding: "20px",
-//     backgroundColor: "#0000007c",
-//     borderRadius: "10px",
-//     boxShadow: "0px 0px 80px 50px #00000086"
-//   }
-
-// }
