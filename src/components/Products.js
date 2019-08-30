@@ -1,43 +1,42 @@
 import React from "react";
 import ItemsList from "./ItemsList";
 
-export default function Services() {
+export default function Products() {
   const items = [
     {
       id: 1,
-      item: "Studio Online",
-      type: "Trial/Subscription",
+      item: "Banck of Tracks",
+      type: "Download",
       image: "imageURL",
-      category: "service"
+      category: "product"
     },
     {
       id: 2,
-      item: "Personal ix",
-      type: "By request",
+      item: "Samples",
+      type: "Download",
       image: "imageURL",
-      category: "service"
+      category: "product"
     },
     {
       id: 3,
-      item: "Audio for Advertising",
-      type: "Trial/Subscription",
+      item: "Courses",
+      type: "Subscription",
       image: "imageURL",
-      category: "service"
+      category: "product"
     },
-    ,
     {
       id: 4,
-      item: "Formats Converter",
+      item: "Opening stickers",
       type: "Free",
       image: "imageURL",
-      category: "service"
+      category: "product"
     }
   ];
   return (
     <div>
       <div style={styles.container}>
         <div style={styles.title}>
-          <h4>Services</h4>
+          <h4>Products</h4>
         </div>
         <ItemsList items={items}></ItemsList>
       </div>
@@ -47,7 +46,7 @@ export default function Services() {
 
 const styles = {
   container: {
-    backgroundColor: "#dfdfdffa",
+    backgroundColor: "#fefefef9",
     padding: "26px 0px 20px 0px", // 480px 0px",
     margin: "0px"
   },

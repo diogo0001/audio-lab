@@ -104,6 +104,7 @@ const FooterContainer = styled.footer`
     background: var(--mainDark);
     padding-top: 2rem;
     color: var(--mainWhite);
+    index-z: 0;
   }
   .footer-bottom {
     padding-top: 1rem;
