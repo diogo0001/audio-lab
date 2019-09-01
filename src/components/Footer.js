@@ -115,5 +115,6 @@ const FooterContainer = styled.footer`
   }
   ul li a:hover {
     color: var(--mainLightGrey);
+    text-decoration: none;
   }
 `;

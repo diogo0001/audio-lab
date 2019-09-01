@@ -22,3 +22,9 @@
   padding: var(--space) var(--space) 0;
   width: 100%;
 }
+
+.dropdown-hover:hover {
+  background-color: #99999944;
+  transition: 0.3s;
+  cursor: pointer;
+}

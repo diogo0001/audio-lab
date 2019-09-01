@@ -9,20 +9,21 @@ export default function AboutUs() {
         </div>
         <div style={styles.text}>
           <p>
-            We are audio passionate and tech enthusiasts. As electronic
-            engineers, we study and develop some audio content and would like to
-            share our knowledge.
+            We are audio passionate and technology enthusiasts. As electronic
+            engineers, we study and develop audio tech content and would like to
+            share our knowledge and experiences.
             <br />
             <br />
-            With years of experience in music market, playing, producing,
-            recording, we found in technology a way to push the boundaries and
-            find more ways to make the difference in this world.
+            With years of experience in the music market - playing, producing,
+            recording, mixing - we found in technology a way to push the
+            boundaries and find more ways to make a difference in this scenario.
             <br />
             <br />
             This platform was conceived to provide the best of audio technology:
             content, services, online tools and more...
             <br />
             <br />
+            Welcome!
           </p>
         </div>
       </div>

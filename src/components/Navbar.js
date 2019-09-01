@@ -1,18 +1,49 @@
 import React, { Component } from "react";
+import "../App.css";
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      dropdownItems: {
+        productsColapsed: false,
+        servicesColapsed: false,
+        tutorialsColapsed: false
+      }
     };
   }
-  toggleNavbar() {
+  toggleNavbar = () => {
     this.setState({
       collapsed: !this.state.collapsed
     });
-  }
+  };
+
+  setProducts = () => {
+    this.setState({ productsColapsed: true });
+    this.setState({ servicesColapsed: false });
+    this.setState({ tutorialsColapsed: false });
+  };
+
+  setServices = () => {
+    this.setState({ servicesColapsed: true });
+    this.setState({ productsColapsed: false });
+    this.setState({ tutorialsColapsed: false });
+  };
+
+  setTutorials = () => {
+    this.setState({ tutorialsColapsed: true });
+    this.setState({ productsColapsed: false });
+    this.setState({ servicesColapsed: false });
+  };
+
+  clearDropdown = () => {
+    this.setState({ tutorialsColapsed: false });
+    this.setState({ productsColapsed: false });
+    this.setState({ servicesColapsed: false });
+  };
+
   render() {
     const collapsed = this.state.collapsed;
     const classOne = collapsed
@@ -22,12 +53,24 @@ class Navbar extends Component {
       ? "navbar-toggler navbar-toggler-right collapsed"
       : "navbar-toggler navbar-toggler-right";
 
+    const menuClassProducts = `dropdown-menu${
+      this.state.productsColapsed ? " show" : ""
+    }  bg-dark border-dark dropdown-hover`;
+
+    const menuClassServices = `dropdown-menu${
+      this.state.servicesColapsed ? " show" : ""
+    }  bg-dark border-dark dropdown-hover`;
+
+    const menuClassTutorials = ` dropdown-menu${
+      this.state.tutorialsColapsed ? " show" : ""
+    } bg-dark border-dark dropdown-hover`;
+
     return (
       <nav
         className=" header navbar navbar-expand-lg navbar-dark bg-dark  "
         style={styles.nav}
       >
-        <img src={"./assets/icons/audio-icon.ico"}></img>
+        <img src={"../assets/icons/audio-icon.ico"}></img>
         <a className="navbar-brand " href="#" style={styles.brand}>
           Audio Tech Lab
         </a>
@@ -46,50 +89,135 @@ class Navbar extends Component {
         <div className={`${classOne}`} id="navbarResponsive">
           <ul className="navbar-nav " style={styles.ul}>
             <li className="ml-auto "></li>
-            <li className="nav-item active ">
-              <a className="nav-link " href="#">
+
+            <li
+              className="nav-item dropdown active ml-2 dropdown-hover "
+              onMouseOver={this.setProducts}
+              onMouseLeave={this.clearDropdown}
+              onMouseDownCapture={this.clearDropdown}
+            >
+              <a
+                className="nav-link "
+                // href="#"
+                id="navbarDropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                // onClick={}
+              >
                 Products
               </a>
+              <div
+                className={menuClassProducts}
+                aria-labelledby="navbarDropdown m-4"
+              >
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Bank of Tracks
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Bank of Samples
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Opening Stickers
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Courses
+                </a>
+              </div>
             </li>
-            <li className="nav-item active ">
-              <a className="nav-link " href="#">
+
+            <li
+              className="nav-item dropdown active ml-2 dropdown-hover"
+              onMouseOver={this.setServices}
+              onMouseLeave={this.clearDropdown}
+              onMouseDownCapture={this.clearDropdown}
+            >
+              <a
+                className="nav-link "
+                // href="#"
+                id="navbarDropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                // onClick={}
+              >
                 Services
               </a>
+              <div
+                className={menuClassServices}
+                aria-labelledby="navbarDropdown"
+              >
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Studio Online
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Audio Publicity
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Audio Custom Services
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Formats Converter
+                </a>
+              </div>
             </li>
-            <li className="nav-item active ">
-              <a className="nav-link " href="#">
+
+            <li
+              className="nav-item dropdown active ml-2 dropdown-hover"
+              onMouseOver={this.setTutorials}
+              onMouseLeave={this.clearDropdown}
+              onMouseDownCapture={this.clearDropdown}
+            >
+              <a
+                className="nav-link "
+                // href="#"
+                id="navbarDropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                // onClick={}
+              >
                 Tutorials
               </a>
+              <div
+                className={menuClassTutorials}
+                aria-labelledby="navbarDropdown"
+              >
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Mixing
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Audio Principles
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Electronics Basics
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  DSP Basics
+                </a>
+                <a className="dropdown-item text-white dropdown-hover" href="#">
+                  Software Basics
+                </a>
+              </div>
             </li>
-            <li className="nav-item active ">
+
+            <li className="nav-item active ml-2 dropdown-hover">
               <a className="nav-link " href="#">
                 About Us
               </a>
             </li>
-            <li className="nav-item active ">
+            <li className="nav-item active ml-2 dropdown-hover">
               <a className="nav-link " href="#">
                 Contact
               </a>
             </li>
-            <li className="nav-item active ">
+            <li className="nav-item active ml-2 dropdown-hover">
               <a className="nav-link " href="#">
-                Sign In
+                Sign Up
               </a>
             </li>
-            <li className="nav-item active  ">
+            <li className="nav-item active ml-2 dropdown-hover">
               <a className="nav-link " href="#">
                 Log In
               </a>
             </li>
-
-            {/* <div>
-              <button type="button" className="btn btn-light mt-1 ml-4 mr-2 ">
-                Sign In
-              </button>
-              <button type="button" className="btn btn-light mt-1 ml-2 mr-2 ">
-                Log In
-              </button>
-            </div> */}
           </ul>
         </div>
       </nav>
@@ -114,6 +242,7 @@ const styles = {
   },
   ul: {
     fontSize: "18px",
-    width: "100%"
+    width: "100%",
+    marginRight: "20px"
   }
 };
