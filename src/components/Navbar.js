@@ -199,22 +199,34 @@ class Navbar extends Component {
             </li>
 
             <li className="nav-item active ml-2 dropdown-hover">
-              <a className="nav-link " href="#">
+              <a
+                className="nav-link "
+                // href="#"
+              >
                 About Us
               </a>
             </li>
             <li className="nav-item active ml-2 dropdown-hover">
-              <a className="nav-link " href="#">
+              <a
+                className="nav-link "
+                // href="#"
+              >
                 Contact
               </a>
             </li>
             <li className="nav-item active ml-2 dropdown-hover">
-              <a className="nav-link " href="#">
+              <a
+                className="nav-link "
+                // href="#"
+              >
                 Sign Up
               </a>
             </li>
             <li className="nav-item active ml-2 dropdown-hover">
-              <a className="nav-link " href="#">
+              <a
+                className="nav-link "
+                // href="#"
+              >
                 Log In
               </a>
             </li>
